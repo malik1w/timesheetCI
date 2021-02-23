@@ -25,6 +25,12 @@ public class DepartementServiceImpl implements IDepartementService {
 		return dept;
 	}
 	
+	@Override
+	public void deleteDepartementById(int depId) {
+		deptRepository.delete(deptRepository.findById(depId).get());	
+	
+	}
+
 	
 
 }
